@@ -407,6 +407,8 @@ echo "
     onelevels=`clean_logged_achievements | awk '{ if (NR % 2 != 0) print $0 }' | wc -l`
     let points="${levels}"+"${onelevels}"
     echo "Unlocked ${unlockedCount}/$total <a href=\"http://github.com/icefox/git-achievements\">Git Achievements</a> for $points points<br>" >> index.html
+    
+    echo "<small><i>since 15 November 2011</i></small><br>" >> index.html
 
     unlocked=`cat "${ACHIEVEMENTSLOGFILE}" | grep Unlocked | wc -l`
 
